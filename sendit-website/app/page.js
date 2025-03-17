@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import HomepageBottomSection from "@/components/HomepageBottomSection";
 import HomepageMiddleSection from "@/components/HomepageMiddleSection";
 import HomepageTopSection from "@/components/HomepageTopSection";
