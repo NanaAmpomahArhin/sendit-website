@@ -56,7 +56,7 @@ const HomepageTopSection = () => {
         </div>
 
         {/* Subtext */}
-        <div className="flex flex-col items-center text-center max-w-[843px] gap-2 w-full mx-auto text-lg sm:text-xl lg:text-[22px] font-roboto">
+        <div className="flex flex-col items-center text-center max-w-[843px] gap-2 w-full mx-auto text-lg sm:text-xl lg:text-[22px] font-mono">
           <p className="leading-tight m-0 text-[#50555C]">
             Order delicious meals, send parcels instantly, shop for anything you
             need,
@@ -65,24 +65,9 @@ const HomepageTopSection = () => {
             and book events hassle-free, all in one powerful, easy-to-use app.
           </p>
         </div>
-      </section>
-
-      {/* Responsive Bottom Section */}
-      <section className="flex flex-wrap justify-center md:justify-between items-center relative mt-12 md:mt-[35%] lg:mt-0 px-4 lg:px-12 gap-6">
-        {/*Third Image */}
-        <div className="w-[48%] absolute md:mt-[5] -left-[10px] -top-[50px] sm:mt-[50%] sm:w-[45%] md:w-[40%]  lg:w-[400px] h-auto lg:top-[10%] 2xl:-mt-[17%] md:-top-[20%]  ">
-          <Image
-            src="/assets/images/motor 1.png"
-            alt="motor rider"
-            className="object-contain w-full"
-            width={525}
-            height={669}
-          />
-        </div>
-
         {/* Button Section */}
-        <div className="flex flex-col justify-center mt-[200px] gap-y-[100px] items-center w-full sm:w-[50%] sm:-mt-[40%] sm:mb-[70%] sm:ml-[32%] md:w-[45%]  lg:w-full 2xl:m-auto 2xl:-mt-[10%] h-screen  2xl:gap-y-[30px] md:mb-[35%] md:ml-[25%] md:-mt-[60%]  lg:m-auto lg:-mt-[10%] lg:mb-[20%] xl:mt-[10%] 2xl:mb-[5%] sm:m-auto">
-          <button className="w-40 sm:w-[308px] h-12 sm:h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041] 2xl:-mt-[5%] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)] font-roboto text-white">
+        <div className="flex flex-col mt-[60px] justify-center gap-y-[100px] items-center ">
+          <button className="w-40 sm:w-[308px] h-12 sm:h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041]  shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)] font-mono text-white">
             Download App
           </button>
           <div className="w-8 sm:w-[32px] h-12 sm:h-[48px] mt-4 lg:mt-[200px]">
@@ -94,9 +79,22 @@ const HomepageTopSection = () => {
             />
           </div>
         </div>
+      </section>
+
+      <section className="flex  justify-between items-center  mt-[30px] md:mb-[60px] lg:mb-[300px] lg:-mt-[600px] 2xl:-mt-[450px]  gap-6">
+        {/*Third Image */}
+        <div className="w-[48%]  sm:w-[45%] md:w-[40%]  lg:w-[400px] h-auto lg:top-[10%] 2xl:-mt-[17%] md:-top-[20%]  ">
+          <Image
+            src="/assets/images/motor 1.png"
+            alt="motor rider"
+            className="object-contain w-full"
+            width={525}
+            height={669}
+          />
+        </div>
 
         {/* Fourth Image */}
-        <div className=" w-[48%]  lg:block size-[395px] md:mt-[10%] absolute right-0 top-30 lg:-right-[500px] sm:left-[50%]  sm:mt-[50%] md:left-[70%] md:-top-[5%] 2xl:-top-[15%] 2xl:left-[80%] lg:top-[30%] xl:left-[76%]  ">
+        <div className=" w-[48%] mt-[160px] sm:w-[45%] md:w-[40%]  lg:w-[400px] h-auto lg:top-[10%]  md:-top-[20%] 2xl:-mt-[0px] ">
           <Image
             className="object-contain"
             src="/assets/images/14662543_2011.i518.006_realistic_tickets-removebg-preview 1.png"

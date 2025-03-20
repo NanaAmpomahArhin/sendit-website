@@ -8,7 +8,7 @@ const MobileMenu = () => {
 
   return (
     <>
-      {/* 🔹 Hamburger Button (Now Moved to the Right) */}
+      {/* Hamburger Button (Now Moved to the Right) */}
       <button
         className="lg:hidden flex items-center justify-center text-3xl font-bold px-3 py-2 rounded-md focus:outline-none ml-auto"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -16,7 +16,7 @@ const MobileMenu = () => {
         ☰ {/* Hamburger icon */}
       </button>
 
-      {/* 🔹 Mobile Menu (Hidden by Default & Slides in When Open) */}
+      {/*Mobile Menu (Hidden by Default & Slides in When Open) */}
       <div
         className={`lg:hidden fixed top-0 right-0 w-2/3 sm:w-1/2 h-screen bg-white shadow-lg flex flex-col items-start px-6 pt-20 gap-6 transition-transform duration-300 ${
           menuOpen ? "block translate-x-0" : "hidden translate-x-full"

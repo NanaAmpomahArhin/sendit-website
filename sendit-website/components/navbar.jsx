@@ -4,7 +4,10 @@ import MobileMenu from "./MobileMenu"; // Import the client component
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between w-full lg:w-[900px] xl:w-[1250px] max-w-[1470px] h-[88px] absolute top-[30px] left-1/2 -translate-x-1/2 rounded-[10px] bg-white/60 shadow-[0px_8px_32px_0px_rgba(0,0,0,0.5)] 2xl:w-[1550px] z-10 px-4 sm:px-6 lg:px-10 ">
+    <nav
+      className="flex items-center justify-between w-full lg:w-[900px] xl:w-[1250px] max-w-[1470px] h-[88px] absolute top-[30px] left-1/2 -translate-x-1/2 rounded-[10px] bg-white/60 shadow-[0px_2px_10px_0px_rgba(0,0,0,0.2)]
+    2xl:w-[1550px] z-10 px-4 sm:px-6 lg:px-10 "
+    >
       {/* Left: Logo */}
       <div className="flex gap-x-[20px]">
         <div className="w-[70px] h-[54px]">

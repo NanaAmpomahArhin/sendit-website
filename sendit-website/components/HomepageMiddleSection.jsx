@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomepageMiddleSection = () => {
   return (
-    <section className="flex flex-col -mt-[160px] px-4 sm:px-8 lg:px-16 lg:-mt-[100px] 2xl:-mt-[10%] md:mt-[5%]">
+    <section className="flex flex-col mt-[100px] px-4 sm:px-8 lg:px-16 lg:-mt-[100px] 2xl:-mt-[10%] md:mt-[5%]">
       {/* Title Section */}
       <div className="flex flex-col justify-center items-center max-w-[843px] w-full text-center mx-auto mb-5">
         <p className="font-semibold text-2xl sm:text-4xl lg:text-[50px] font-poppins leading-tight m-0">
@@ -15,14 +15,14 @@ const HomepageMiddleSection = () => {
 
       {/* Subtext Section */}
       <div className="max-w-[843px] w-full flex flex-col items-center text-center mx-auto mb-10 lg:mb-[80px] md:mb-[20%]">
-        <p className="font-normal text-[#50555C] font-roboto text-lg sm:text-xl lg:text-[22px] tracking-tighter lg:w-[920px] lg:mt-[25px]">
+        <p className="font-normal text-[#50555C] font-mono text-lg sm:text-xl lg:text-[22px] tracking-tighter lg:w-[920px] lg:mt-[25px]">
           From Food delivery to event booking, SendIt simplifies your daily
           tasks with ease and efficiency.
         </p>
       </div>
 
       {/* Features Section */}
-      <div className="flex flex-wrap justify-center items-center gap-x-7 mx-auto lg:gap-x-[9px] md:mb-[10%] xl:gap-x-[15%] xl:gap-y-[15%] 2xl:gap-x-[9px] 2xl:-mb-[6%]">
+      <div className="flex flex-wrap justify-center items-center gap-x-7 mx-auto lg:gap-x-[9px] md:mb-[10%] lg:mb-[2%] xl:gap-x-[15%] xl:gap-y-[15%] 2xl:gap-x-[9px] 2xl:-mb-[6%]">
         {[
           {
             img: "emojione_pot-of-food.png",
@@ -62,7 +62,7 @@ const HomepageMiddleSection = () => {
                   alt={item.text}
                 />
               </div>
-              <p className="font-medium font-roboto tracking-normal text-lg sm:text-xl lg:text-[22px]">
+              <p className="font-medium font-mono tracking-normal text-lg sm:text-xl lg:text-[22px]">
                 {item.text}
               </p>
             </div>
@@ -76,7 +76,7 @@ const HomepageMiddleSection = () => {
       </div>
 
       {/*  Business Partner Section */}
-      <div className="flex flex-wrap justify-center gap-y-12 mt-16 mx-auto lg:mt-[180px] lg:m-auto sm:max-3xl:ml-[0px] ">
+      <div className="flex flex-wrap justify-center gap-y-12 mt-16 mx-auto lg:mt-[180px] lg:m-auto sm:max-3xl:ml-[0px] 2xl:mt-[15%] ">
         {[
           {
             img: "young Black man ,.png",
@@ -108,7 +108,7 @@ const HomepageMiddleSection = () => {
             <p className="font-poppins font-bold text-lg sm:text-xl lg:text-[20px]">
               {item.title}
             </p>
-            <p className="font-poppins font-normal text-base sm:text-lg lg:text-[16px] leading-5 lg:text-left lg:w-[379px] h-[75px] lg:tracking-[0.5px] lg:-mt-[10px]">
+            <p className="font-poppins font-normal text-base sm:text-lg lg:text-[16px] leading-5 lg:text-left lg:w-[330px] xl:w-[379px] h-[75px] lg:tracking-[0.5px] lg:-mt-[10px]">
               {item.desc}
             </p>
             <button

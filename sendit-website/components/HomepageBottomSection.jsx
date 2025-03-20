@@ -42,7 +42,7 @@ const HomepageBottomSection = () => {
             },
           ].map((item, index) => (
             <div key={index} className="flex ml-[5px] gap-x-5">
-              <div className="flex justify-center items-center w-[43px] h-[43px] rounded-full bg-green-100">
+              <div className="flex  flex-shrink-0 justify-center items-center w-[43px] h-[43px] rounded-full bg-green-100">
                 <p
                   className="font-normal text-lg text-[#17A448]"
                   style={{ fontFamily: "var(--font-rubik)" }}
@@ -70,7 +70,7 @@ const HomepageBottomSection = () => {
             Shop Smarter <br />
             with SendIt
           </p>
-          <p className="font-poppins font-normal text-lg max-w-[570px] sm:text-xl lg:text-[22px] text-white lg:w-[700px]">
+          <p className="font-mono font-normal text-lg max-w-[570px] sm:text-xl lg:text-[22px] text-white lg:w-[700px]">
             Discover a wide range of products and enjoy a seamless shopping
             experience right at your fingertips.
           </p>
@@ -137,7 +137,7 @@ const HomepageBottomSection = () => {
               >
                 {item.title}
               </p>
-              <p className="font-sans font-normal tracking-wide text-left text-base sm:text-lg lg:text-[20px] text-white leading-[25px]">
+              <p className="font-mono font-normal tracking-wide text-left text-base sm:text-lg lg:text-[20px] text-white leading-[25px]">
                 {item.description}
               </p>
             </div>
