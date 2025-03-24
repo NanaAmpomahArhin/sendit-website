@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomepageMiddleSection = () => {
   return (
-    <section className="flex flex-col mt-[100px] px-4 sm:px-8 lg:px-16 lg:-mt-[100px] 2xl:-mt-[10%] md:mt-[5%]">
+    <section className="flex flex-col mt-[50px] px-4 sm:px-8 lg:px-16  md:mt-[15%]">
       {/* Title Section */}
       <div className="flex flex-col justify-center items-center max-w-[843px] w-full text-center mx-auto mb-5">
         <p className="font-semibold text-2xl sm:text-4xl lg:text-[50px] font-poppins leading-tight m-0">
@@ -49,7 +49,7 @@ const HomepageMiddleSection = () => {
             key={index}
             className="flex gap-x-7 items-center lg:gap-x-[40px]"
           >
-            {/* 🔹 Icon & Text */}
+            {/*Icon & Text */}
             <div className="flex flex-col gap-y-4 justify-center items-center">
               <div
                 className={`w-[100px] h-[100px] rounded-full bg-gradient-to-r ${item.gradient} backdrop-blur-sm flex justify-center items-center`}
@@ -76,7 +76,7 @@ const HomepageMiddleSection = () => {
       </div>
 
       {/*  Business Partner Section */}
-      <div className="flex flex-wrap justify-center gap-y-12 mt-16 mx-auto lg:mt-[180px] lg:m-auto sm:max-3xl:ml-[0px] 2xl:mt-[15%] ">
+      <div className="flex flex-wrap  justify-center gap-y-12 gap-x-[30px] mt-16 lg:mt-[180px] sm:max-3xl:ml-[0px] 2xl:mt-[15%] ">
         {[
           {
             img: "young Black man ,.png",
@@ -93,10 +93,15 @@ const HomepageMiddleSection = () => {
             title: "Host With SendIt",
             desc: "Sell tickets effortlessly, reach a wider audience, and make your events a success all in one place!",
           },
+          {
+            img: "motorcycles.png",
+            title: "Join the Fleet",
+            desc: "Drive, deliver, and earn on your terms with our reliable fleet network.",
+          },
         ].map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center ml-[30px] w-full sm:w-[47%] lg:w-[30%] gap-5 text-left lg: items-start"
+            className="flex flex-col justify-center w-[400px]  gap-5 text-left lg: items-start"
           >
             <Image
               className="rounded-[20px] w-full max-w-[400px]"

@@ -5,8 +5,8 @@ import MobileMenu from "./MobileMenu"; // Import the client component
 const Navbar = () => {
   return (
     <nav
-      className="flex items-center justify-between w-full lg:w-[900px] xl:w-[1250px] max-w-[1470px] h-[88px] absolute top-[30px] left-1/2 -translate-x-1/2 rounded-[10px] bg-white/60 shadow-[0px_2px_10px_0px_rgba(0,0,0,0.2)]
-    2xl:w-[1550px] z-10 px-4 sm:px-6 lg:px-10 "
+      className="flex items-center justify-between w-full lg:w-[900px] xl:w-[1250px] 2xl:w-[1700px] h-[88px] absolute top-[30px] left-1/2 -translate-x-1/2 rounded-[10px] bg-white/60 shadow-[0px_2px_10px_0px_rgba(0,0,0,0.2)]
+     z-10 px-4 sm:px-6 lg:px-10 2xl:px-30"
     >
       {/* Left: Logo */}
       <div className="flex gap-x-[20px]">
@@ -36,14 +36,14 @@ const Navbar = () => {
       <MobileMenu />
 
       {/* Partner Section (Desktop Only) */}
-      <div className="hidden lg:flex items-center pl-[7px] gap-x-2 w-[228px] h-[54px] bg-white">
-        <p className="font-[Plus Jakarta Sans] font-medium text-[18px] leading-none">
+      <div className="hidden lg:flex items-center pl-[7px] gap-x-[2px] max-w-[228px] max-h-[54px] bg-[#17A448] rounded-[5px] px-[10px] py-[15px]">
+        <p className="font-[Plus Jakarta Sans] font-medium text-[18px] leading-none text-white">
           Become Our Partner
         </p>
         <div className="w-[24px] h-[24px] flex items-center justify-center">
           <Image
             className="object-contain"
-            src="/assets/icons/arrow-down.png"
+            src="/assets/icons/dropdown.png"
             alt="arrow-down"
             width={13.31}
             height={7.67}
