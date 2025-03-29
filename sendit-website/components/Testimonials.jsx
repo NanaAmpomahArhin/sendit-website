@@ -52,7 +52,7 @@ export default function Testimonials() {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col w-full h-auto items-start justify-center text-center p-15 2xl:px-12">
+    <div className="flex flex-col w-full h-auto items-start justify-center text-center p-6  2xl:px-12">
       <h2 className="font-poppins text-[#17A448] font-medium text-[20px] leading-[28px] tracking-[0px] text-left">
         Testimonials
       </h2>

@@ -41,7 +41,7 @@ const BecomeOurPartner = () => {
         <p className="font-poppins font-medium max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]   tracking-tight 2xl:mb-[50px]">
           Why Partner with Sendit?
         </p>
-        <div className="flex flex-row flex-wrap gap-y-[100px]  2xl:gap-x-[90px]">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-y-[40px] gap-x-[30px]  2xl:gap-x-[90px]">
           {[
             {
               img: "tdesign_chart-analytics.png",
@@ -64,7 +64,10 @@ const BecomeOurPartner = () => {
               desc: "With SendIt, your success doesn’t come with extra costs. We grow when you do simple as that.",
             },
           ].map((item, index) => (
-            <div className="flex items-start flex-row gap-[30px]" key={index}>
+            <div
+              className="flex items-start justify-center flex-row min-h-[200px] gap-[30px]"
+              key={index}
+            >
               <div className=" flex items-center flex-shrink-0 justify-center w-[50px] h-[50px] rounded-full sm:w-[100px] sm:h-[100px]  bg-[#17A448]/20 ">
                 <Image
                   src={`/assets/icons/${item.img}`}
@@ -165,7 +168,7 @@ const BecomeOurPartner = () => {
           ))}
         </div>
       </section>
-      <section className="flex flex-nowrap items-center justify-center lg:px-[200px] m-auto 2xl:px-30 2xl:items-start">
+      <section className="flex flex-nowrap items-center justify-center lg:px-[200px]  2xl:px-30 2xl:items-start">
         <Testimonials />
         <Image
           src="/assets/images/baker.png"
@@ -175,7 +178,7 @@ const BecomeOurPartner = () => {
           className="rounded-[10px] hidden 2xl:block"
         />
       </section>
-      <section className="flex flex-col items-center justify-center lg:h-[803px] w-full bg-[#17A448] mt-[15%] gap-y-[30px] px-6 py-[70px] sm:py-[110px] sm:py-[120px] mb-[15%] lg:px-10 lg:gap-y-[60px]">
+      <section className="flex flex-col items-center justify-center lg:h-[803px] w-full bg-[#17A448] mt-[15%] gap-y-[30px] px-6 py-[70px]  sm:py-[120px] mb-[15%] lg:px-10 lg:gap-y-[60px]">
         <p className="font-poppins font-medium text-[35px] sm:text-[45px] lg:text-[63.22px] leading-[55.75px] lg:leading-[65.75px] text-[#F5F5F5] text-center">
           Ready to Power Your Business?
         </p>
