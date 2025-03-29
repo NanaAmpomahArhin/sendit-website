@@ -165,7 +165,7 @@ const BecomeOurPartner = () => {
           ))}
         </div>
       </section>
-      <section className="flex flex-nowrap items-center lg:px-[200px] 2xl:px-30 2xl:items-start">
+      <section className="flex flex-nowrap items-center justify-center lg:px-[200px] m-auto 2xl:px-30 2xl:items-start">
         <Testimonials />
         <Image
           src="/assets/images/baker.png"
@@ -184,10 +184,10 @@ const BecomeOurPartner = () => {
           built-in customer traffic.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-y-[20px] gap-x-[20px] xl:gap-x-[40px]">
-          <button className=" h-[80px] w-[300px] xl:h-[96px] rounded-[5px] p-[10px] bg-[#F5F5F5] text-[#17A448] text-mono font-medium text-[16px] text-[30px] leading-[40.46px] tracking-[0px] text-center">
+          <button className=" h-[80px] w-[300px] xl:h-[96px] rounded-[5px] p-[10px] bg-[#F5F5F5] text-[#17A448] text-mono font-medium text-[16px] sm:text-[30px] leading-[40.46px] tracking-[0px] text-center">
             Business a Partner
           </button>
-          <button className=" h-[80px] w-[298px] xl:h-[96px] rounded-[5px] border border-[#F5F5F5] p-[10px] text-[#F5F5F5] text-mono font-medium text-[16px] text-[30px] leading-[40.46px] tracking-[0px] text-center">
+          <button className=" h-[80px] w-[298px] xl:h-[96px] rounded-[5px] border border-[#F5F5F5] p-[10px] text-[#F5F5F5] text-mono font-medium text-[16px] sm:text-[30px] leading-[40.46px] tracking-[0px] text-center">
             Contact Us
           </button>
         </div>

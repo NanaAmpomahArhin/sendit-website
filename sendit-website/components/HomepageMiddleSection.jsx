@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomepageMiddleSection = () => {
   return (
-    <section className="flex flex-col mt-[50px] px-4 sm:px-8 lg:px-16  md:mt-[15%]">
+    <section className="flex flex-col -mt-[7%] px-4 sm:px-8 lg:px-16   2xl:mt-[10%]">
       {/* Title Section */}
       <div className="flex flex-col justify-center items-center max-w-[843px] w-full text-center mx-auto mb-5">
         <p className="font-semibold text-2xl sm:text-4xl lg:text-[50px] font-poppins leading-tight m-0">
