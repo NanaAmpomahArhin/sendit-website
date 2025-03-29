@@ -9,8 +9,8 @@ const BecomeOurPartner = () => {
         <div className="absolute inset-0 bg-[url('/assets/images/81555.png')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#9B9B9B]/50 via-[#0E0E0E]/55 to-[#666666]"></div>
 
-        <div className="relative pb-[30px] z-10 flex flex-col items-center gap-y-[60px] lg:-mt-[30px] 2xl:-mt-[170px]">
-          <button className="max-w-[413px]  mt-[215px] rounded-[50px] border-[1px] pt-[8px] pr-[10px] pb-[8px] pl-[10px] text-[#17A448] font-mono font-light text-[15px] sm:text-[16px] gap-[10px]">
+        <div className="relative pb-[30px]  mt-[215px] flex flex-col items-center gap-y-[60px] lg:-mt-[30px] 2xl:-mt-[170px]">
+          <button className="max-w-[413px]  rounded-[50px] border-[1px] pt-[8px] pr-[10px] pb-[8px] pl-[10px] text-[#17A448] font-mono font-light text-[15px] sm:text-[16px] gap-[10px]">
             Join the Sendit network today and grow your business!
           </button>
           <div className="flex flex-col items-center m-auto gap-y-[15px] text-center">
@@ -38,10 +38,10 @@ const BecomeOurPartner = () => {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center pl-[15px] sm:pl-[25px] gap-[50px] 2xl:pl-[70px] mb-[25%] 2xl:mb-[10%]">
-        <p className="font-poppins font-medium max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]  leading-[58px] tracking-tight 2xl:mb-[50px]">
+        <p className="font-poppins font-medium max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]   tracking-tight 2xl:mb-[50px]">
           Why Partner with Sendit?
         </p>
-        <div className="flex flex-row flex-wrap gap-y-[100px] 2xl:gap-x-[90px]">
+        <div className="flex flex-row flex-wrap gap-y-[100px]  2xl:gap-x-[90px]">
           {[
             {
               img: "tdesign_chart-analytics.png",
@@ -75,7 +75,7 @@ const BecomeOurPartner = () => {
                 />
               </div>
               <div className="flex flex-col max-w-[720px] max-h-[119px] gap-y-[20px] sm:gap-y-[40px]">
-                <p className="font-poppins font-semibold text-[24px] sm:text-[32px] text-[#252525] leading-[60%] tracking-[-0.66px] max-w-[645px] max-h-[60px]">
+                <p className="font-poppins font-semibold text-[24px] sm:text-[32px] text-[#252525]  tracking-[-0.66px] max-w-[645px] max-h-[60px]">
                   {item.text}
                 </p>
                 <p className="font-mono font-normal text-[18px] sm:text-[22px] text-[#50555C] leading-[30px] max-w-[645px] max-h-[60px]">
