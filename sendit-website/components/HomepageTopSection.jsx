@@ -58,7 +58,7 @@ const HomepageTopSection = () => {
       <div className="hidden 2xl:block w-[494.54px] h-[494.54px] bg-[#5DC041] blur-[500px] rotate-[162.27deg] overflow-hidden absolute right-[20px] top-[700px] "></div>
 
       {startDisappearance && (
-        <div className="hidden 2xl:flex  items-center  w-full pl-[7%] py-[195px] gap-x-[60px] ">
+        <div className="hidden 2xl:flex  items-center  w-full pl-[7%] py-[195px] gap-x-[60px] mt-25 ">
           <div className="flex flex-col gap-[60px]">
             <p className="w-[582px] h-[105px] font-poppins font-bold text-[36px] leading-[98%] tracking-[2%]">
               WHEREVER YOU ARE, WE’VE GOT YOU! CONVENIENCE DELIVERED TO YOUR
@@ -218,7 +218,7 @@ const HomepageTopSection = () => {
             </motion.div>
           </div>
           <div>
-            <p className="font-mono font-normal text-[24px] leading-[98%] tracking-[2%] text-[#50555C] max-w-[500px] h-[72px] -ml-[350px]">
+            <p className="font-mono font-normal text-[24px] leading-[98%] tracking-[2%] text-[#50555C] max-w-[500px] h-[72px] -ml-[300px]">
               Wherever you are, enjoy seamless shopping, fast deliveries, easy
               bookings, and exclusive rewards—all in one app.
             </p>

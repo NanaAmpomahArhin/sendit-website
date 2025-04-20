@@ -7,14 +7,19 @@ const Footer = () => {
     <footer className="flex flex-col gap-y-10 w-full px-6 sm:px-10 lg:px-20 py-10 lg:mt-[90px]">
       {/* Navigation Links */}
       <section className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 pb-6 border-b border-b-[#545454] text-center lg:pb-[40px]">
-        {["About", "FAQ", "Support", "Privacy Policy"].map((item, index) => (
+        {[
+          { label: "About", link: "about" },
+          { label: "FAQ", link: "faq" },
+          { label: "Support", link: "support" },
+          { label: "Privacy Policy", link: "policy" },
+        ].map((item, index) => (
           <Link
             key={index}
-            href="/"
-            className=" font-semibold text-lg sm:text-xl lg:text-[22px]  tracking-[-0.76px]"
+            href={`/${item.link}`}
+            className=" font-semibold text-lg sm:text-xl lg:text-[27.72px]  tracking-[-0.76px]"
             style={{ fontFamily: "var(--font-jakarta)" }}
           >
-            {item}
+            {item.label}
           </Link>
         ))}
       </section>

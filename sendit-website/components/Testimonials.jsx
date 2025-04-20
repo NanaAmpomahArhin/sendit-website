@@ -25,13 +25,12 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  // Function to smoothly change testimonials
   const changeTestimonial = (nextIndex) => {
-    setFade(false); // Start fade-out effect
+    setFade(false);
     setTimeout(() => {
       setCurrentIndex(nextIndex);
-      setFade(true); // Start fade-in effect
-    }, 700); // Delay should match CSS transition time
+      setFade(true);
+    }, 500); // Match with duration below
   };
 
   const nextTestimonial = () => {
@@ -45,7 +44,6 @@ export default function Testimonials() {
     changeTestimonial(prevIndex);
   };
 
-  // Auto change testimonial every 5 seconds
   useEffect(() => {
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
@@ -56,6 +54,7 @@ export default function Testimonials() {
       <h2 className="font-poppins text-[#17A448] font-medium text-[20px] leading-[28px] tracking-[0px] text-left">
         Testimonials
       </h2>
+
       <div className="flex flex-col">
         <div className="flex w-[50px] h-[50px] -ml-[15px]">
           <img
@@ -70,9 +69,12 @@ export default function Testimonials() {
           />
         </div>
 
+        {/* Transitioning content */}
         <div
-          className={`px-[45px] max-w-[703px] h-auto flex flex-col transition-opacity duration-700 ${
-            fade ? "opacity-100" : "opacity-0"
+          className={`px-[45px] max-w-[703px] h-auto flex flex-col transform-gpu transition-all duration-500 ease-in-out ${
+            fade
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-2 pointer-events-none"
           }`}
         >
           <p className="font-mono font-normal text-[24px] text-[#50555C] leading-[32px] tracking-[0px] text-left">
@@ -87,7 +89,7 @@ export default function Testimonials() {
         <div className="flex mt-[30px] gap-x-[20px]">
           <button
             onClick={prevTestimonial}
-            className="w-[60px] h-[60px] flex items-center justify-center bg-[#17A448]/20 rounded-full cursor:pointer"
+            className="w-[60px] h-[60px] flex items-center justify-center bg-[#17A448]/20 rounded-full"
           >
             <Image
               src="/assets/icons/formkit_left.png"
@@ -98,7 +100,7 @@ export default function Testimonials() {
           </button>
           <button
             onClick={nextTestimonial}
-            className="w-[60px] h-[60px] flex items-center justify-center bg-[#17A448]/20 rounded-full cusor-pointer"
+            className="w-[60px] h-[60px] flex items-center justify-center bg-[#17A448]/20 rounded-full"
           >
             <Image
               src="/assets/icons/formkit_right.png"

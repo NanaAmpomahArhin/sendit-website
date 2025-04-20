@@ -154,13 +154,13 @@ const HomepageBottomSection = () => {
           <div className="absolute  w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]  xl:w-[500px] xl:h-[500px]  rounded-full bg-[radial-gradient(circle,#5FD63D_0%,#17A448_100%)] shadow-[inset_0px_27.95px_31.95px_#5FD63D] top-10 2xl:top-5 z-0"></div>
 
           {/* Phone Image */}
-          <div className="relative ml-[35%] md:ml-[28%] lg:ml-[7%] sm:-mt-[20px] z-10 flex justify-center items-center max-w-[400px] sm:max-w-[450px] md:max-w-[500px]  xl:max-w-[750px] 2xl:w-[1000px]  2xl:-mt-[4%]">
+          <div className="relative ml-[35%] md:ml-[28%] lg:ml-[7%] xl:ml-[4%] 2xl:ml-[7%] sm:-mt-[20px] z-10 flex justify-center items-center max-w-[400px] sm:max-w-[450px] md:max-w-[500px]  xl:max-w-[750px] 2xl:w-[1000px]  2xl:-mt-[4%]">
             <Image
               src="/assets/images/Iphone 14 - 1.png"
               width={399}
               height={806}
               alt="iphone 1"
-              className="w-full h-auto 2xl:h-[650px]"
+              className="w-full h-auto 2xl:w-[999px] 2xl:h-[650px]"
             />
           </div>
 

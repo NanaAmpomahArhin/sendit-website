@@ -1,3 +1,5 @@
+import CurvedArrowLottie from "@/components/ArrowAnimation";
+
 import Testimonials from "@/components/Testimonials";
 import Image from "next/image";
 import React from "react";
@@ -7,9 +9,9 @@ const BecomeOurPartner = () => {
     <>
       <section className="relative  w-full flex justify-center items-center mb-[15%] 2xl:mb-[5%]  2xl:h-[982px]">
         <div className="absolute inset-0 bg-[url('/assets/images/81555.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#9B9B9B]/50 via-[#0E0E0E]/55 to-[#666666]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#9B9B9B]/50 via-[#0E0E0E]/55 to-[#666666]/2"></div>
 
-        <div className="relative pb-[30px]  mt-[215px] flex flex-col items-center gap-y-[60px] lg:-mt-[30px] 2xl:-mt-[170px]">
+        <div className="relative pb-[30px]  mt-[215px] flex flex-col items-center gap-y-[60px]  2xl:mt-[70px]">
           <button className="max-w-[413px]  rounded-[50px] border-[1px] pt-[8px] pr-[10px] pb-[8px] pl-[10px] text-[#17A448] font-mono font-light text-[15px] sm:text-[16px] gap-[10px]">
             Join the Sendit network today and grow your business!
           </button>
@@ -38,7 +40,7 @@ const BecomeOurPartner = () => {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center pl-[15px] sm:pl-[25px] gap-[50px] 2xl:pl-[70px] mb-[25%] 2xl:mb-[10%]">
-        <p className="font-poppins font-medium max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]   tracking-tight 2xl:mb-[50px]">
+        <p className="font-poppins font-semibold max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]   tracking-tight 2xl:mb-[50px]">
           Why Partner with Sendit?
         </p>
         <div className="flex flex-row flex-wrap items-center justify-center gap-y-[40px] gap-x-[30px]  2xl:gap-x-[90px]">
@@ -120,13 +122,13 @@ const BecomeOurPartner = () => {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center w-full px-6">
-        <p className="font-poppins font-medium text-[35px] sm:text-[50px] leading-[65.75px] text-[#252525] text-center mb-[1%]">
+        <p className="font-poppins font-semibold text-[35px] sm:text-[50px] leading-[65.75px] text-[#252525] text-center mb-[1%]">
           Getting Started is Simple
         </p>
         <p className="font-mono text-[20px] sm:text-[27.82px] text-[#50555C] leading-[40.46px] text-center mb-[10%] 2xl:mb-[5%]">
           Streamline your operations and reach more buyers, faster.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-y-[40px] mb-[15%] 2xl:gap-x-[70px]">
+        <div className="flex flex-wrap items-center justify-center gap-y-[40px] mb-[15%] 2xl:gap-x-[0px]">
           {[
             {
               img: "fluent-mdl2_join-online-meeting.png",
@@ -148,22 +150,27 @@ const BecomeOurPartner = () => {
               title: "Go Live & Earn",
               desc: "Go live, receive orders, and start growing with SendIt.",
             },
-          ].map((item, index) => (
-            <div className="flex flex-col items-center" key={index}>
-              <div className="flex items-center justify-center w-[162.41px] h-[162.41px] rounded-full bg-[#17A448]/20">
-                <Image
-                  src={`/assets/icons/${item.img}`}
-                  alt={item.title}
-                  width={87.32}
-                  height={87.32}
-                />
+          ].map((item, index, arr) => (
+            <div className="flex items-center justify-center" key={index}>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center w-[162.41px] h-[162.41px] rounded-full bg-[#17A448]/20">
+                  <Image
+                    src={`/assets/icons/${item.img}`}
+                    alt={item.title}
+                    width={87.32}
+                    height={87.32}
+                  />
+                </div>
+                <p className="text-center text-[28px] font-poppins font-semibold text-[#252525] leading-[57.41px] tracking-[0px]">
+                  {item.title}
+                </p>
+                <p className="text-center text-[20.96px] text-[#50555C] font-mono leading-[27.07px] tracking-[0px] w-[351.03px] h-[55px]">
+                  {item.desc}
+                </p>
               </div>
-              <p className="text-center text-[28px] font-poppins font-semibold text-[#252525] leading-[57.41px] tracking-[0px]">
-                {item.title}
-              </p>
-              <p className="text-center text-[20.96px] text-[#50555C] font-mono leading-[27.07px] tracking-[0px] w-[351.03px] h-[55px]">
-                {item.desc}
-              </p>
+              {index !== arr.length - 1 && (
+                <CurvedArrowLottie className="hidden  w-[172px] h-[73.62px] -ml-[40px] 2xl:flex self-start mt-[20px]" />
+              )}
             </div>
           ))}
         </div>
@@ -188,7 +195,7 @@ const BecomeOurPartner = () => {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-y-[20px] gap-x-[20px] xl:gap-x-[40px]">
           <button className=" h-[80px] w-[300px] xl:h-[96px] rounded-[5px] p-[10px] bg-[#F5F5F5] text-[#17A448] text-mono font-medium text-[16px] sm:text-[30px] leading-[40.46px] tracking-[0px] text-center">
-            Business a Partner
+            Become a Partner
           </button>
           <button className=" h-[80px] w-[298px] xl:h-[96px] rounded-[5px] border border-[#F5F5F5] p-[10px] text-[#F5F5F5] text-mono font-medium text-[16px] sm:text-[30px] leading-[40.46px] tracking-[0px] text-center">
             Contact Us

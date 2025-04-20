@@ -1,18 +1,19 @@
+import CurvedArrowLottie from "@/components/ArrowAnimation";
 import Image from "next/image";
 import React from "react";
 
 const RidersPage = () => {
   return (
     <>
-      <section className="relative  w-full flex justify-center items-center mb-[15%] 2xl:mb-[5%]  2xl:h-[982px] z-5">
+      <section className="relative  w-full flex justify-center items-center mb-[15%] 2xl:mb-[5%]  2xl:h-[1207px] z-5">
         <div className="absolute inset-0 bg-[url('/assets/images/ridersbg.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#9B9B9B]/50 via-[#0E0E0E]/55 to-[#666666]"></div>
-        <div className="relative pb-[30px] z-10 flex flex-col items-center gap-y-[60px] lg:-mt-[30px] 2xl:-mt-[170px]">
-          <button className="max-w-[190px]  mt-[215px] rounded-[50px] border-[1px] border-[#F5F5F5] pt-[8px] pr-[15px] pb-[8px] pl-[15px] text-[#F5F5F5] font-mono font-light text-[16px] gap-[10px]">
-            Becone a SendIt Rider
+        <div className="absolute inset-0 bg-gradient-to-r from-[#9B9B9B]/50 via-[#0E0E0E]/55 to-[#666666]/2"></div>
+        <div className="relative pb-[30px] z-10 flex flex-col items-center gap-y-[60px] lg:-mt-[30px] 2xl:-mt-[390px]">
+          <button className="max-w-[200px]  mt-[215px] rounded-[50px] border-[1px] border-[#F5F5F5] pt-[8px] pr-[15px] pb-[8px] pl-[15px] text-[#F5F5F5] font-mono font-light text-[16px] gap-[10px]">
+            Become a SendIt Rider
           </button>
           <div className="flex flex-col items-center m-auto gap-y-[15px] text-center">
-            <p className="font-poppins mb-0 text-[#F5F5F5] font-bold text-[30px] sm:text-[40px] lg:text-[50px] leading-[80%] tracking-[2%] max-w-[90%] sm:max-w-[897px]">
+            <p className="font-poppins mb-0 text-[#F5F5F5] font-bold text-[30px] sm:text-[40px] lg:text-[50px]  tracking-[2%] max-w-[90%] sm:max-w-[897px]">
               EARN DAILY. RIDE FREELY. DELIVER
             </p>
             <p className="font-poppins m-0 text-[#F5F5F5] font-bold text-[28px]  sm:text-[40px] lg:text-[50px] leading-[80%] tracking-[2%] max-w-[90%] sm:max-w-[897px]">
@@ -86,11 +87,11 @@ const RidersPage = () => {
         ))}
       </div>
 
-      <section className="flex flex-col w-full items-center justify-center px-10 mt-[25%] xl:mt-[15%] 2xl:mt-[10%] mb-[25%] xl:mb-[15%]">
+      <section className="flex  flex-wrap w-full items-center justify-center px-10 mt-[25%] xl:mt-[15%] 2xl:mt-[10%] mb-[25%] xl:mb-[15%] 2xl:mb-[10%]">
         <p className="font-poppins font-semibold text-[35px] sm:text-[50px] text-center text-[#252525] leading-[38px]">
           What You'll Need to Get Started
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-[30px] 2xl:gap-[190px] xl:mt-[5%]">
+        <div className="flex w-full flex-wrap items-center justify-center gap-[30px] 2xl:gap-[190px] xl:mt-[5%]">
           <div className="flex w-[637px] h-[431.65px] items-center justify-center">
             <Image
               src="/assets/images/Illustration.png"
@@ -100,7 +101,7 @@ const RidersPage = () => {
               className="w-[500px] h-auto 2xl:w-[637px] 2xl:h-[431.65px]"
             />
           </div>
-          <div className="flex flex-col items-center justify-center w-[597px] min-h-[351px] gap-y-[30px] ">
+          <div className="flex flex-col gap-y-[30px] ">
             {[
               { text: "A valid national ID" },
               { text: "A delivery method (bike, scooter, or car)" },
@@ -108,7 +109,7 @@ const RidersPage = () => {
               { text: "Proof of address (for verification)" },
             ].map((item, index) => (
               <div
-                className="flex items-center w-full justify-start gap-x-[20px]  ml-[170px] sm:ml-[100px]"
+                className="flex gap-[30px] items-center justify-start"
                 key={index}
               >
                 <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[#17A448]/20">
@@ -119,12 +120,12 @@ const RidersPage = () => {
                     height={16.84}
                   />
                 </div>
-                <p className="font-poppins text-[20px] sm:text-[28px] text-[#252525] leading-normal tracking-[-0.96px]">
+                <p className="font-poppins text-[20px] max-w-[607px] sm:text-[28px] text-[#252525] leading-normal tracking-[-0.96px]">
                   {item.text}
                 </p>
               </div>
             ))}
-            <p className="font-mono text-[24px] text-wrap text-[#454545] italic tracking-[-0.96px] w-[400px] md:w-[550px] max-w-[597px] min-h-[14px] -ml-[20px] sm:-ml-[75px] md:ml-[60px] z-10">
+            <p className="font-mono text-[24px] text-wrap text-[#454545] italic tracking-[-0.96px] w-[400px] md:w-[550px] max-w-[597px] min-h-[14px] z-10">
               *No delivery experience? No worries we'll guide you.
             </p>
           </div>
@@ -134,7 +135,7 @@ const RidersPage = () => {
         <p className="font-poppins font-semibold text-[35px] text-center text-[#252525] sm:text-[50px]">
           How to Start Earning in 4 Simple Steps
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-[50px] mt-[15%] xl:mt-[5%]">
+        <div className="flex flex-wrap items-center justify-center gap-[50px] 2xl:gap-[0px] mt-[15%] xl:mt-[5%]">
           {[
             {
               step: "1",
@@ -156,22 +157,24 @@ const RidersPage = () => {
               title: "Start Delivering",
               desc: "Accept orders, track your earnings, and grow with SendIt.",
             },
-          ].map((item, index) => (
-            <div
-              className="flex flex-col items-center w-[351.03px] h-[304.23px] justify-center gap-[20px]"
-              key={index}
-            >
-              <div className="flex items-center justify-center w-[162.41px] h-[162.41px] rounded-full bg-[#17A448]/20">
-                <p className="font-mono font-bold text-[80px] text-[#17A448]">
-                  {item.step}
+          ].map((item, index, arr) => (
+            <div className="flex items-center justify-center" key={index}>
+              <div className="flex flex-col items-center w-[351.03px] h-[304.23px] justify-center gap-[20px]">
+                <div className="flex items-center justify-center w-[162.41px] h-[162.41px] rounded-full bg-[#17A448]/20">
+                  <p className="font-mono font-bold text-[80px] text-[#17A448]">
+                    {item.step}
+                  </p>
+                </div>
+                <p className="font-poppins font-semibold text-[28px] text-center text-[#252525]">
+                  {item.title}
+                </p>
+                <p className="font-mono text-[20.96px] text-center text-[#50555C]">
+                  {item.desc}
                 </p>
               </div>
-              <p className="font-poppins font-semibold text-[28px] text-center text-[#252525]">
-                {item.title}
-              </p>
-              <p className="font-mono text-[20.96px] text-center text-[#50555C]">
-                {item.desc}
-              </p>
+              {index !== arr.length - 1 && (
+                <CurvedArrowLottie className="hidden  w-[172px] h-[73.62px] -ml-[40px] 2xl:flex self-start mt-[20px]" />
+              )}
             </div>
           ))}
         </div>

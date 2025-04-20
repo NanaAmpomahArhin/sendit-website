@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import PartnerDropdownButton from "./PartnerDropdown";
 
 const MobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,24 +32,24 @@ const MobileMenu = () => {
         </button>
 
         {/* Mobile Navigation Links */}
-        {["About", "Newsroom", "Support", "Careers"].map((item, index) => (
+        {[
+          { title: "About", link: "about" },
+          { title: "Newsroom", link: "newsroom" },
+          { title: "Support", link: "support" },
+          { title: "Careers", link: "careers" },
+        ].map((item, index) => (
           <Link
             key={index}
             className="font-[Plus Jakarta Sans] font-medium text-[18px] hover:text-[#17A448] transition-all"
-            href="/"
+            href={`/${item.link}`}
             onClick={() => setMenuOpen(false)}
           >
-            {item}
+            {item.title}
           </Link>
         ))}
 
         {/* Partner Section (Mobile) */}
-        <div className="flex items-center gap-x-2 w-full py-4 px-6 bg-white border-t">
-          <p className="font-[Plus Jakarta Sans] font-medium text-[18px]">
-            Become Our Partner
-          </p>
-          <span className="text-xl">▼</span> {/* Downward arrow */}
-        </div>
+        <PartnerDropdownButton />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomepageMiddleSection = () => {
   return (
-    <section className="flex flex-col -mt-[7%] px-4 sm:px-8 lg:px-16   2xl:mt-[10%]">
+    <section className="flex flex-col -mt-[7%] px-4 sm:px-8 lg:px-16 2xl:mt-[10%]">
       {/* Title Section */}
       <div className="flex flex-col justify-center items-center max-w-[843px] w-full text-center mx-auto mb-5">
         <p className="font-semibold text-2xl sm:text-4xl lg:text-[50px] font-poppins leading-tight m-0">
@@ -15,7 +15,7 @@ const HomepageMiddleSection = () => {
 
       {/* Subtext Section */}
       <div className="max-w-[843px] w-full flex flex-col items-center text-center mx-auto mb-10 lg:mb-[80px] md:mb-[20%]">
-        <p className="font-normal text-[#50555C] font-mono text-lg sm:text-xl lg:text-[22px] tracking-tighter lg:w-[920px] lg:mt-[25px]">
+        <p className="font-normal text-[#50555C] font-mono text-lg sm:text-xl lg:text-[27.82px]  lg:w-[1065.94px] lg:mt-[25px]">
           From Food delivery to event booking, SendIt simplifies your daily
           tasks with ease and efficiency.
         </p>
@@ -62,7 +62,7 @@ const HomepageMiddleSection = () => {
                   alt={item.text}
                 />
               </div>
-              <p className="font-medium font-mono tracking-normal text-lg sm:text-xl lg:text-[22px]">
+              <p className="font-medium font-mono tracking-normal text-lg sm:text-xl lg:text-[27.82px]">
                 {item.text}
               </p>
             </div>
