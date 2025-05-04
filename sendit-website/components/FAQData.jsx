@@ -51,16 +51,16 @@ const FAQData = () => {
   };
 
   return (
-    <div className="py-6  w-full flex flex-col justify-center items-start">
+    <div className="py-6 w-[400px] sm:w-[590px] md:w-[700px] lg:w-[950px] xl:w-[1240px] 2xl:w-[1523px] flex flex-col justify-center items-center">
       {/* Tabs */}
-      <div className="flex  gap-6 mb-8 overflow-auto ">
+      <div className="flex pl-5 md:pl-0 flex-wrap gap-0.5 sm:gap-2 md:gap-6 mb-8  self-start ">
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-5 py-2 rounded-full text-sm sm:text-base font-medium transition ${
+            className={` p-[5px] sm:p-[10px] rounded-[5px] text-sm sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] min-w-[114px] font-medium transition ${
               activeTab === tab
-                ? "bg-[#000] text-white"
-                : "bg-gray-100 text-gray-700"
+                ? "bg-[#FAFAFA] text-[#454545]"
+                : "bg-white text-[#545454]"
             }`}
             onClick={() => {
               setActiveTab(tab);
@@ -73,32 +73,40 @@ const FAQData = () => {
       </div>
 
       {/* FAQ Items */}
-      <div className=" flex flex-col justify-center items-center w-[1523px] h-[767px] bg-white rounded-xl">
+      <div className=" flex flex-col justify-baseline items-start w-[400px] sm:w-[590px] md:w-[700px] lg:w-[950px] xl:w-[1240px] 2xl:w-[1523px] h-[767px] bg-white rounded-xl cursor-pointer">
         {faqData[activeTab]?.map((item, index) => (
           <div
-            className="flex justify-center items-center w-[1523px] text-[32px] sm:text-xl font-semibold text-[#252525]  min-h-[160px] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)]"
+            className="flex flex-col justify-center p-10 items-start w-[400px] sm:w-[590px] md:w-[700px] lg:w-[950px] xl:w-[1240px] 2xl:w-[1523px]  min-h-[160px] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)]"
             key={index}
             onClick={() => handleToggle(index)}
           >
-            {item.question}
-            <span>
-              {openIndex === index ? (
-                <img
-                  src="/assets/icons/mingcute_up-line.png"
-                  className="w-[32px] h-[32px]"
-                  alt="up-arrow"
-                />
-              ) : (
-                <img
-                  src="/assets/icons/mingcute_down-line.png"
-                  className="w-[32px] h-[32px]"
-                  alt="down-arrow"
-                />
-              )}
-            </span>
+            <div className="flex py-10 w-full justify-between items-center ">
+              {" "}
+              <p
+                className="text-[#252525] text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px] font-semibold"
+                style={{ fontFamily: "var(--font-jakarta)" }}
+              >
+                {item.question}
+              </p>
+              <span>
+                {openIndex === index ? (
+                  <img
+                    src="/assets/icons/mingcute_up-line.png"
+                    className="w-[32px] h-[32px]"
+                    alt="up-arrow"
+                  />
+                ) : (
+                  <img
+                    src="/assets/icons/mingcute_down-line.png"
+                    className="w-[32px] h-[32px]"
+                    alt="down-arrow"
+                  />
+                )}
+              </span>
+            </div>
 
             {openIndex === index && (
-              <p className="px-2 py-3 text-[#787878] text-sm sm:text-base lg:text-[24px]">
+              <p className="max-w-[1401px] text-[#787878] font-mono text-sm sm:text-base lg:text-[24px]">
                 {item.answer}
               </p>
             )}
