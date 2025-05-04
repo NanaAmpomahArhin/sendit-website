@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MobileMenu from "./MobileMenu"; // Import the client component
+import MobileMenu from "./MobileMenu";
 import PartnerDropdownButton from "./PartnerDropdown";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
     >
       {/* Left: Logo */}
       <div className="flex gap-x-[20px]">
-        <div className="w-[70px] h-[54px]">
+        <Link href="/" className="w-[70px] h-[54px]">
           <Image
             className="w-full h-full object-contain"
             src="/assets/icons/2tiSGebxBzycjDadgt6ISHwYDVG 1.png"
@@ -19,7 +19,7 @@ const Navbar = () => {
             width={70}
             height={54}
           />
-        </div>
+        </Link>
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-10">
           {[

@@ -20,6 +20,39 @@ const HomepageTopSection = () => {
   const [showElements, setShowElements] = useState(false);
   const [shake, setShake] = useState(false);
 
+  const getPositionClasses = (itemName) => {
+    switch (itemName) {
+      case "marker":
+        return " lg:top-[150px] 2xl:top-[220px] lg:left-[-300px] xl:left-[-290px]";
+      case "hamburger":
+        return "xl:top-[400px] lg:top-[390px] lg:left-[-200px] 2xl:left-[-230px]  ";
+      case "check":
+        return " lg:top-[270px] xl:top-[295px] 2xl:top-[333px] lg:right-[320px] xl:right-[278px] 2xl:right-[275px] ";
+      case "aim":
+        return "lg:top-[220px] xl:top-[290px] 2xl:top-[335px] lg:right-[510px] xl:right-[460px] 2xl:right-[440px]  ";
+      default:
+        return "";
+    }
+  };
+
+  {
+    /*Absolute postions of elements around the smaller iphone*/
+  }
+  const getSecondPositionClasses = (itemName) => {
+    switch (itemName) {
+      case "marker":
+        return "top-[30px] left-[-50px] lg:top-[40px] lg:left-[-80px]";
+      case "hamburger":
+        return "top-[140px]  lg:top-[240px] left-[-50px] lg:left-[-40px]";
+      case "check":
+        return "top-[80px] lg:top-[120px] right-[-65px] lg:right-[-50px] ";
+      case "aim":
+        return "top-[30px] lg:top-[110px] right-[65px] lg:right-[60px]  ";
+      default:
+        return "";
+    }
+  };
+
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setFoodImageIndex((prevIndex) => (prevIndex + 1) % foodImages.length);
@@ -51,20 +84,20 @@ const HomepageTopSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[1182px] overflow-hidden">
-      <div className="hidden 2xl:block absolute top-[620.36px] w-[339.459px] h-[339.459px] bg-[#5DC041] blur-[250px] overflow-hidden rotate-[-162.272deg] flex-shrink-0"></div>
-      <div className="hidden 2xl:block w-[494.54px] h-[494.54px] bg-[#5DC041] blur-[500px] rotate-[162.27deg] overflow-hidden absolute top-[700px] "></div>
-      <div className="hidden 2xl:block absolute top-[620.36px] right-[20px] w-[339.459px] h-[339.459px] bg-[#5DC041] overflow-hidden blur-[250px] rotate-[-162.272deg] flex-shrink-0"></div>
-      <div className="hidden 2xl:block w-[494.54px] h-[494.54px] bg-[#5DC041] blur-[500px] rotate-[162.27deg] overflow-hidden absolute right-[20px] top-[700px] "></div>
+    <section className="relative  lg:h-[1000px] 2xl:h-[1182px] overflow-hidden">
+      <div className="hidden lg:block absolute top-[620.36px] w-[339.459px] h-[339.459px] bg-[#5DC041] blur-[250px] overflow-hidden rotate-[-162.272deg] flex-shrink-0"></div>
+      <div className="hidden lg:block w-[494.54px] h-[494.54px] bg-[#5DC041] blur-[500px] rotate-[162.27deg] overflow-hidden absolute top-[700px] "></div>
+      <div className="hidden lg:block absolute top-[620.36px] right-[20px] w-[339.459px] h-[339.459px] bg-[#5DC041] overflow-hidden blur-[250px] rotate-[-162.272deg] flex-shrink-0"></div>
+      <div className="hidden lg:block w-[494.54px] h-[494.54px] bg-[#5DC041] blur-[500px] rotate-[162.27deg] overflow-hidden absolute right-[20px] top-[700px] "></div>
 
       {startDisappearance && (
-        <div className="hidden 2xl:flex  items-center  w-full pl-[7%] py-[195px] gap-x-[60px] mt-25 ">
-          <div className="flex flex-col gap-[60px]">
-            <p className="w-[582px] h-[105px] font-poppins font-bold text-[36px] leading-[98%] tracking-[2%]">
+        <div className="hidden lg:flex  items-center  w-full pl-[7%] py-[195px] gap-x-[60px] lg:mt-10  ">
+          <div className="flex flex-col gap-[60px] lg:-mt-15 xl:mt-0 lg:gap-[20px] xl:gap-[60px]">
+            <p className=" lg:max-w-[300px] xl:max-w-[550px] 2xl:w-[582px] h-[105px] font-poppins font-bold lg:text-[22px] xl:text-[28px] 2xl:text-[36px] leading-[98%] tracking-[2%]">
               WHEREVER YOU ARE, WE’VE GOT YOU! CONVENIENCE DELIVERED TO YOUR
               DOOR!
             </p>
-            <button className="w-[308px] h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041] shadow-md font-mono text-white text-[22px]">
+            <button className="w-[308px] xl:max-w-[250px] 2xl:w-[308px] h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041] shadow-md font-mono text-white text-[22px]">
               Download App
             </button>
           </div>
@@ -82,15 +115,14 @@ const HomepageTopSection = () => {
                 width={751.69}
                 height={800}
                 objectFit="cover"
-                className="-mt-[120px]"
+                className="lg:-mt-[90px] xl:-mt-[120px] lg:w-[630px] lg:h-[750px] xl:w-[700px] xl:h-[810px] 2xl:w-[751.61px] 2xl:h-[900.328px]"
               />
 
               {/*  Elements around the iPhone */}
               {[
                 {
                   name: "marker",
-                  top: "220px",
-                  left: "-290px",
+
                   content: (
                     <div className="flex items-center justify-center w-[324px] h-[91px] bg-white rounded-[30px] shadow-md relative px-10">
                       <p className="text-[18px] font-normal leading-[20px] tracking-[3%]">
@@ -109,8 +141,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "check",
-                  top: "333px",
-                  right: "275px",
+
                   content: (
                     <div className="relative">
                       <div className="flex items-center justify-center w-[183px] h-[37px] bg-white rounded-[30px] shadow-md">
@@ -131,8 +162,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "aim",
-                  top: "335px",
-                  right: "440px",
+
                   content: (
                     <div className="flex items-center justify-center w-[72.71px] h-[72.71px] bg-[#17A448] rounded-[13px] absolute top-[100px] left-[50px] rotate-[30deg] backdrop-blur-[143.05px] debug">
                       <Image
@@ -146,8 +176,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "hamburger",
-                  top: "400px",
-                  left: "-230px",
+
                   content: (
                     <Image
                       src="/assets/icons/Group 2.png"
@@ -164,12 +193,7 @@ const HomepageTopSection = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={showElements ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: index * 0.5, duration: 0.5 }}
-                  className="absolute"
-                  style={{
-                    top: item.top,
-                    left: item.left || "unset",
-                    right: item.right || "unset",
-                  }}
+                  className={`absolute ${getPositionClasses(item.name)}`}
                 >
                   {item.content}
                 </motion.div>
@@ -180,7 +204,7 @@ const HomepageTopSection = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={showElements ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 2, duration: 0.5 }}
-                className="absolute top-[610px] right-[180px]"
+                className="absolute lg:top-[530px] lg:right-[220px] xl:top-[560px] 2xl:top-[610px] xl:right-[180px]"
               >
                 <div className="flex flex-col gap-y-[5px] justify-center pl-[25px] relative w-[291px] h-[111px] bg-white rounded-[30px]">
                   <p className="font-mono font-medium w-[124px] h-[21px] text-[18px] leading-[100%] tracking-[0%]">
@@ -217,19 +241,18 @@ const HomepageTopSection = () => {
               </motion.div>
             </motion.div>
           </div>
-          <div>
-            <p className="font-mono font-normal text-[24px] leading-[98%] tracking-[2%] text-[#50555C] max-w-[500px] h-[72px] -ml-[300px]">
-              Wherever you are, enjoy seamless shopping, fast deliveries, easy
-              bookings, and exclusive rewards—all in one app.
-            </p>
-          </div>
+
+          <p className="font-mono font-normal lg:text-[16px] xl:text-[19px] 2xl:text-[24px] leading-[98%] tracking-[2%] text-[#50555C]  lg:min-w-[200px] lg:max-w-[300px] lg:w-auto xl:min-w-[300px] xl:max-w-[400px] xl:w-auto 2xl:max-w-[500px] h-[72px] lg:-ml-[420px] lg:-mt-10 xl:mt-0 xl:-ml-[350px] 2xl:-ml-[300px]">
+            Wherever you are, enjoy seamless shopping, fast deliveries, easy
+            bookings, and exclusive rewards—all in one app.
+          </p>
         </div>
       )}
       <>
         <section className="relative flex justify-between w-full">
           {/* Left-side Image (Boxes) */}
           <motion.div
-            className="hidden 2xl:block absolute left-0 2xl:w-[471px] h-auto"
+            className="hidden lg:block absolute left-0 2xl:w-[471px] h-auto"
             initial={{ scale: 1, opacity: 1, x: 0 }}
             animate={
               startDisappearance ? { scale: 0, opacity: 0, x: "15vw" } : {}
@@ -247,7 +270,7 @@ const HomepageTopSection = () => {
 
           {/* Right-side Image (Food) - Cycles through different images */}
           <motion.div
-            className="hidden 2xl:block -top-20 absolute right-0 2xl:w-[501px] h-auto"
+            className="hidden lg:block -top-20 absolute right-0 lg:w-[300px] xl:w-[400px] 2xl:w-[501px] h-auto"
             initial={{ scale: 1, opacity: 1, x: 0 }}
             animate={
               startDisappearance ? { scale: 0, opacity: 0, x: "-15vw" } : {}
@@ -268,7 +291,7 @@ const HomepageTopSection = () => {
         <section className="relative flex items-center w-full h-auto">
           {/* Bottom-left Image (Motor Rider) */}
           <motion.div
-            className="hidden 2xl:block absolute bottom-0 top-50 2xl:w-[525px] h-[669px]"
+            className="hidden lg:block absolute bottom-0 lg:top-80 xl:top-75 2xl:top-50 2xl:w-[525px] h-[669px]"
             initial={{ scale: 1, opacity: 1, y: 0 }}
             animate={
               startDisappearance ? { scale: 0, opacity: 0, y: "-10vh" } : {}
@@ -286,7 +309,7 @@ const HomepageTopSection = () => {
 
           {/* Bottom-right Image (Tickets) */}
           <motion.div
-            className="hidden 2xl:block absolute top-150  bottom-0 left-[80%] 2xl:w-[395px] h-[395px]"
+            className="hidden lg:block absolute top-150  bottom-0 left-[80%] 2xl:w-[395px] h-[395px]"
             initial={{ scale: 1, opacity: 1, y: 0 }}
             animate={
               startDisappearance ? { scale: 0, opacity: 0, y: "-10vh" } : {}
@@ -302,7 +325,7 @@ const HomepageTopSection = () => {
             />
           </motion.div>
         </section>
-        <section className="flex relative flex-col w-full text-center mt-50 lg:mt-40 xl:mt-40 2xl:mt-80 px-4">
+        <section className="flex relative flex-col w-full text-center mt-70 lg:mt-40 xl:mt-40 2xl:mt-80 px-4">
           {/*Fire & Lick Emoji - Fade out when text changes */}
           <motion.div
             initial={{ opacity: 1 }}
@@ -321,7 +344,7 @@ const HomepageTopSection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: showFirstText ? 50 : -50 }}
               transition={{ duration: 1 }}
-              className="text-2xl sm:text-4xl lg:text-[50px] font-bold font-poppins leading-[98%] tracking-[2%] m-0"
+              className="text-2xl sm:text-4xl lg:text-[30px] 2xl:text-[50px] font-bold font-poppins leading-[98%] tracking-[2%] m-0 xl:mt-10 2xl:mt-0"
             >
               {showFirstText
                 ? "SEND, SHOP, DINE & MORE"
@@ -334,7 +357,7 @@ const HomepageTopSection = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: showFirstText ? -50 : 50 }}
               transition={{ duration: 1 }}
-              className="text-2xl sm:text-4xl lg:text-[50px] font-bold font-poppins m-0 mb-[45px]"
+              className="text-2xl sm:text-4xl lg:text-[30px] 2xl:text-[50px] font-bold font-poppins m-0 mb-[45px]"
             >
               {showFirstText ? "ALL IN ONE APP!" : "WHEREVER YOU ARE!"}
             </motion.p>
@@ -347,7 +370,7 @@ const HomepageTopSection = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: showFirstText ? -50 : 50 }}
             transition={{ duration: 1 }}
-            className="flex flex-col items-center text-center max-w-[843px] gap-2 w-full mx-auto text-lg sm:text-xl lg:text-[22px] font-mono"
+            className="flex flex-col items-center text-center  lg:max-w-[500px] xl:max-w-[700px] 2xl:max-w-[843px] gap-2 w-full mx-auto text-lg sm:text-xl lg:text-[19px] 2xl:text-[22px] font-mono"
           >
             <p className="leading-tight m-0 text-[#50555C]">
               {showFirstText
@@ -367,27 +390,26 @@ const HomepageTopSection = () => {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="relative w-[300px] h-[450.22px] ml-[120px]"
+              className="relative w-[200px] h-[300px] lg:w-[300px] lg:h-[450.22px] mt-[20px]"
             >
               <Image
-                src="/assets/images/Iphone 14 - 2.png"
+                src="/assets/images/iphone2.png"
                 alt="iphone 14"
-                layout="fill"
-                objectFit="cover"
+                fill
+                objectFit="contain"
               />
 
               {/*  Elements around the iPhone */}
               {[
                 {
                   name: "marker",
-                  top: "95px",
-                  left: "-90px",
+
                   content: (
-                    <div className="flex items-center justify-center w-[147.27px] h-[41.36px] bg-white rounded-[13.64px] shadow-md relative">
+                    <div className="flex items-center justify-center w-[130px] sm:w-[147.27px] h-[41.36px] bg-white rounded-[13.64px] shadow-md relative">
                       <p className="text-[8.18px] leading-[9.09px] tracking-[3%]">
                         Any apartment, any street, any city, wherever you are!
                       </p>
-                      <div className="absolute -top-[25px] -left-[15px] flex justify-center items-center w-[32.73px] h-[32.73px] bg-[#5DC041] rounded-full shadow-md">
+                      <div className="absolute -top-[25px] -left-[15px] flex justify-center items-center w-[28.73px] h-[28.73px] bg-[#5DC041] rounded-full shadow-md">
                         <Image
                           src="/assets/icons/marker(1) 1.png"
                           width={13.64}
@@ -400,8 +422,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "check",
-                  top: "150px",
-                  right: "25px",
+
                   content: (
                     <div className="relative">
                       <div className="flex items-center justify-center w-[115.03px] h-[23.26px] bg-white rounded-[18.86px] shadow-md">
@@ -422,8 +443,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "aim",
-                  top: "125px",
-                  right: "135px",
+
                   content: (
                     <div className="flex items-center justify-center w-[41.11px] h-[41.11px] bg-[#17A448] rounded-[7.35px] absolute top-[100px] left-[50px] rotate-[30deg] backdrop-blur-[143.05px] debug">
                       <Image
@@ -437,8 +457,7 @@ const HomepageTopSection = () => {
                 },
                 {
                   name: "hamburger",
-                  top: "275px",
-                  left: "-70px",
+
                   content: (
                     <Image
                       src="/assets/icons/Group 2.png"
@@ -455,12 +474,7 @@ const HomepageTopSection = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={showElements ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: index * 0.5, duration: 0.5 }}
-                  className="absolute"
-                  style={{
-                    top: item.top,
-                    left: item.left || "unset",
-                    right: item.right || "unset",
-                  }}
+                  className={`absolute ${getSecondPositionClasses(item.name)}`}
                 >
                   {item.content}
                 </motion.div>
@@ -471,7 +485,7 @@ const HomepageTopSection = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={showElements ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 2, duration: 0.5 }}
-                className="absolute top-[330px] right-[10px]"
+                className="absolute top-[220px] right-[-60px] lg:top-[350px] lg:right-[-100px]"
               >
                 <div className="flex flex-col gap-y-[5px] justify-center pl-[25px] relative w-[164.1px] h-[62.59px] bg-white rounded-[16.92px]">
                   <p className="font-mono font-medium w-[70px] h-[12px] text-[10.15px] leading-[100%] tracking-[0%]">

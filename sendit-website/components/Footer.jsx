@@ -16,7 +16,7 @@ const Footer = () => {
           <Link
             key={index}
             href={`/${item.link}`}
-            className=" font-semibold text-lg sm:text-xl lg:text-[27.72px]  tracking-[-0.76px]"
+            className=" font-semibold text-lg sm:text-xl lg:text-[27.72px]  tracking-[-0.76px] hover:text-[#17A448]"
             style={{ fontFamily: "var(--font-jakarta)" }}
           >
             {item.label}

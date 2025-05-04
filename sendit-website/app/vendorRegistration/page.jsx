@@ -1,11 +1,10 @@
-import FAQData from "@/components/FAQData";
+import VendorRegistrationProcess from "@/components/VendorRegistrationProcess";
 import React from "react";
 
-const FAQPage = () => {
+const VendorRegistration = () => {
   return (
     <>
-      {" "}
-      <section className="flex flex-col justify-center min-h-[790px] relative bg-white overflow-hidden  sm:mb-20 px-4 sm:px-6 lg:px-10">
+      <section className="flex flex-col justify-center min-h-[790px] relative bg-white overflow-hidden sm:mb-20 px-4 sm:px-6 lg:px-10">
         {/* Gradients */}
         <img
           src="/assets/icons/Group 1000004339.png"
@@ -39,37 +38,22 @@ const FAQPage = () => {
 
         <div className="flex flex-col justify-center items-center gap-[30px] z-3 relative px-4 sm:px-6">
           <div className="text-center text-[#252525] text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] 2xl:text-[50px] font-bold font-poppins uppercase leading-[1.2] tracking-wide">
-            GOT questions? we’ve got answers
+            Join as a Store or Restaurant Partner
           </div>
           <div className="text-center text-[#50555C] text-[18px] sm:text-[20px] md:text-[24px] lg:text-[26px] 2xl:text-[27.82px] font-normal font-mono leading-relaxed sm:leading-9 md:leading-10">
-            Find solutions to common issues or contact our support team for
-            personalized help.
+            Let's help your business reach more customers, make more sales, and
+            deliver faster
+          </div>
+          <div className="flex items-center justify-center mt-10">
+            <button className="w-[298px] h-[75px] rounded-[10px] p-[11.69px] bg-[#17A448] font-mono text-white leading-[32px] tracking-[0px] text-[25.73px] font-medium">
+              Become a Partner
+            </button>
           </div>
         </div>
-        <div className="flex items-center px-4 sm:px-6 bg-[#F5F5F5] w-full max-w-[695px] gap-4 sm:gap-[30px] mx-auto h-[71px] rounded-[7px] border border-[#DCE0E4] mt-8">
-          <img
-            src="/assets/icons/ri_search-line.png"
-            alt="search"
-            className="w-5 h-5 sm:w-6 sm:h-6"
-          />
-          <input
-            placeholder="Search FAQs..."
-            className="text-base sm:text-[18px] text-[#808080] font-mono flex-1 bg-transparent outline-none"
-          />
-        </div>
       </section>
-      <section className="flex flex-col justify-center gap-[50px] items-center w-full md:mt-30 mb-60">
-        <FAQData />
-        <p className="font-mono text-base sm:text-lg md:text-xl lg:text-2xl text-[#454545] text-center sm:text-left">
-          Can’t find what you’re looking for?
-        </p>
-
-        <button className="w-[227px] h-[75px] bg-[#17A448] text-[#F5F5F5] text-[24px] rounded-[5px] font-mono">
-          Contact Support
-        </button>
-      </section>
+      <VendorRegistrationProcess />
     </>
   );
 };
 
-export default FAQPage;
+export default VendorRegistration;

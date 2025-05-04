@@ -2,6 +2,7 @@ import CurvedArrowLottie from "@/components/ArrowAnimation";
 
 import Testimonials from "@/components/Testimonials";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BecomeOurPartner = () => {
@@ -34,9 +35,11 @@ const BecomeOurPartner = () => {
               delivery solutions and dedicated support
             </p>
           </div>
-          <button className="w-[308px] h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)] font-mono text-white leading-[32px] tracking-[0px] text-[22px] font-medium">
-            Sign Up as a Vendor
-          </button>
+          <Link href="/vendorRegistration">
+            <button className="w-[308px] h-[59px] rounded-[10px] p-[10px] bg-gradient-to-r from-[#17A448] to-[#5DC041] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)] font-mono text-white leading-[32px] tracking-[0px] text-[22px] font-medium">
+              Sign Up as a Vendor
+            </button>
+          </Link>
         </div>
       </section>
       <section className="flex flex-col items-center justify-center pl-[15px] sm:pl-[25px] gap-[50px] 2xl:pl-[70px] mb-[25%] 2xl:mb-[10%]">
