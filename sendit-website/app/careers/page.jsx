@@ -40,16 +40,16 @@ const CareersPage = () => {
         <div className="relative z-3 flex flex-col-reverse xl:flex-row items-center justify-center gap-[40px] md:mt-40 2xl:mt-40 mt-20">
           {/* Left Text Section */}
           <div className="w-full max-w-[806px] flex flex-col justify-center gap-6 sm:gap-8 lg:gap-10 text-center xl:text-left">
-            <div className="text-[#252525] text-[32px] sm:text-[38px] md:text-[44px] lg:text-[50px] font-bold font-['Poppins'] uppercase leading-[49px] tracking-wide">
+            <div className="text-[#252525] text-[32px] sm:text-[38px] md:text-[44px] lg:text-[50px] font-bold font-poppins uppercase leading-[49px] tracking-wide">
               Why Work at SendIt?
             </div>
-            <div className="text-[#50555C] text-[18px] sm:text-[22px] md:text-[24px] lg:text-[27.82px] font-normal font-['Roboto'] leading-relaxed">
+            <div className="text-[#50555C] text-[18px] sm:text-[22px] md:text-[24px] lg:text-[27.82px] font-normal font-mono leading-relaxed">
               At SendIt, we're building the future of delivery logistics. Our
               team is passionate about creating solutions that make a real
               difference for businesses and communities.
             </div>
             <div className="flex justify-center xl:justify-start">
-              <button className="w-[220px] sm:w-[260px] lg:w-[298px] h-[60px] sm:h-[68px] lg:h-[75px] text-center bg-[#17A448] rounded-[5px] px-[20px] py-[10px] text-[#F5F5F5] text-[18px] sm:text-[20px] lg:text-[24px] font-medium font-['Roboto'] leading-10">
+              <button className="w-[220px] sm:w-[260px] lg:w-[298px] h-[60px] sm:h-[68px] lg:h-[75px] text-center bg-[#17A448] rounded-[5px] px-[20px] py-[10px] text-[#F5F5F5] text-[18px] sm:text-[20px] lg:text-[24px] font-medium font-mono leading-10">
                 View Open Roles
               </button>
             </div>
@@ -66,7 +66,7 @@ const CareersPage = () => {
 
       <section className="flex flex-col justify-center items-center gap-[80px] min-h-screen h-auto px-4 sm:px-6 lg:px-10 py-16">
         <div className="flex flex-col w-full max-w-[1568px] justify-start items-center gap-12 sm:gap-16">
-          <p className="text-center text-[#252525] text-[32px] sm:text-[40px] lg:text-[50px] font-semibold font-['Poppins'] leading-[48px] sm:leading-[58px]">
+          <p className="text-center text-[#252525] text-[32px] sm:text-[40px] lg:text-[50px] font-semibold font-poppins leading-[48px] sm:leading-[58px]">
             Open Positions
           </p>
 
@@ -102,7 +102,7 @@ const CareersPage = () => {
                 className="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between items-start md:items-center w-full bg-white shadow-[0px_8px_32px_0px_rgba(0,0,0,0.08)] px-6 md:px-10 lg:px-20 py-6 md:h-[222px]"
               >
                 <div className="flex flex-col justify-start items-start gap-[15px] max-w-full">
-                  <p className="text-[#252525] text-[24px] sm:text-[28px] lg:text-[32px] font-semibold font-['Poppins'] leading-snug">
+                  <p className="text-[#252525] text-[24px] sm:text-[28px] lg:text-[32px] font-semibold font-poppins leading-snug">
                     {job.title}
                   </p>
                   <div className="flex flex-wrap justify-start items-center gap-3.5">
@@ -111,19 +111,19 @@ const CareersPage = () => {
                         key={tagIndex}
                         className="min-w-[90px] h-7 px-2.5 py-0.5 border border-[#DCE0E4] flex justify-center items-center"
                       >
-                        <p className="text-[#545454] text-base font-normal font-['Roboto'] leading-none">
+                        <p className="text-[#545454] text-base font-normal font-mono leading-none">
                           {tag}
                         </p>
                       </div>
                     ))}
                   </div>
-                  <p className="text-[#787878] text-[16px] sm:text-lg font-normal font-['Roboto'] leading-snug max-w-[705px]">
+                  <p className="text-[#787878] text-[16px] sm:text-lg font-normal font-mono leading-snug max-w-[705px]">
                     {job.description}
                   </p>
                 </div>
 
                 <div className="w-full md:w-auto flex justify-end">
-                  <button className="w-full md:w-[200px] h-[60px] md:h-[75px] bg-[#17A448] p-[5px] rounded-[5px] text-center text-[#F5F5F5] text-lg md:text-2xl font-medium font-['Roboto'] leading-10">
+                  <button className="w-full md:w-[200px] h-[60px] md:h-[75px] bg-[#17A448] p-[5px] rounded-[5px] text-center text-[#F5F5F5] text-lg md:text-2xl font-medium font-mono leading-10">
                     Apply Now
                   </button>
                 </div>
@@ -132,7 +132,7 @@ const CareersPage = () => {
           </div>
         </div>
 
-        <button className="w-full max-w-[284.25px] h-[60px] sm:h-[63.25px] border border-[#17A448] rounded-[5px] flex justify-center items-center text-[#17A448] text-lg sm:text-[26.25px] font-medium font-['Poppins'] leading-9">
+        <button className="w-full max-w-[284.25px] h-[60px] sm:h-[63.25px] border border-[#17A448] rounded-[5px] flex justify-center items-center text-[#17A448] text-lg sm:text-[26.25px] font-medium font-poppins leading-9">
           View All Open Roles
         </button>
       </section>

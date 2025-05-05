@@ -43,10 +43,10 @@ const BecomeOurPartner = () => {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center pl-[15px] sm:pl-[25px] gap-[50px] 2xl:pl-[70px] mb-[25%] 2xl:mb-[10%]">
-        <p className="font-poppins font-semibold max-w-[627px] max-h-[58px] text-[35px] sm:text-[50px]   tracking-tight 2xl:mb-[50px]">
+        <p className="font-poppins font-semibold max-w-[627px] max-h-[58px] text-[35px] sm:text-[45px] md:text-[50px]  tracking-tight 2xl:mb-[50px]">
           Why Partner with Sendit?
         </p>
-        <div className="flex flex-row flex-wrap items-center justify-center gap-y-[40px] gap-x-[30px]  2xl:gap-x-[90px]">
+        <div className="flex flex-row flex-wrap items-center justify-center  gap-y-[40px] lg:gap-y-[100px] gap-x-[30px]  2xl:gap-x-[90px]">
           {[
             {
               img: "tdesign_chart-analytics.png",
@@ -70,20 +70,20 @@ const BecomeOurPartner = () => {
             },
           ].map((item, index) => (
             <div
-              className="flex items-start justify-center flex-row min-h-[200px] gap-[30px]"
+              className="flex items-start justify-center lg:w-[470px] xl:w-[550px] 2xl:w-[600px] flex-row min-h-[200px] gap-[30px]"
               key={index}
             >
-              <div className=" flex items-center flex-shrink-0 justify-center w-[50px] h-[50px] rounded-full sm:w-[100px] sm:h-[100px]  bg-[#17A448]/20 ">
+              <div className=" flex items-center flex-shrink-0 justify-center w-[50px] h-[50px]  rounded-full sm:w-[100px] sm:h-[100px] lg:w-[70px] lg:h-[70px] bg-[#17A448]/20 ">
                 <Image
                   src={`/assets/icons/${item.img}`}
                   alt={item.text}
                   width={48}
                   height={48}
-                  className="w-[24px] h-[24px] md:w-[48px] md:h-[48px]"
+                  className="w-[24px] h-[24px] md:w-[48px] md:h-[48px] lg:w-[30px] lg:h-[30px]"
                 />
               </div>
               <div className="flex flex-col max-w-[720px] max-h-[119px] gap-y-[20px] sm:gap-y-[40px]">
-                <p className="font-poppins font-semibold text-[24px] sm:text-[32px] text-[#252525]  tracking-[-0.66px] max-w-[645px] max-h-[60px]">
+                <p className="font-poppins font-semibold text-[24px] sm:text-[32px] text-[#252525] leading-10  tracking-[-0.66px] max-w-[645px] max-h-[60px]">
                   {item.text}
                 </p>
                 <p className="font-mono font-normal text-[18px] sm:text-[22px] text-[#50555C] leading-[30px] max-w-[645px] max-h-[60px]">
@@ -178,14 +178,14 @@ const BecomeOurPartner = () => {
           ))}
         </div>
       </section>
-      <section className="flex flex-nowrap items-center justify-center lg:px-[200px]  2xl:px-30 2xl:items-start">
+      <section className="flex flex-wrap flex-col-reverse xl:flex-row xl:flex-nowrap items-center justify-center px-5 lg:px-[200px]  xl:px-30 xl:items-start">
         <Testimonials />
         <Image
           src="/assets/images/baker.png"
           alt="baker"
           width={735}
           height={497}
-          className="rounded-[10px] hidden 2xl:block"
+          className="rounded-[10px] xl:w-[600px] xl:h-[400px] 2xl:w-[735px] 2xl:h-[497px]"
         />
       </section>
       <section className="flex flex-col items-center justify-center lg:h-[803px] w-full bg-[#17A448] mt-[15%] gap-y-[30px] px-6 py-[70px]  sm:py-[120px] mb-[15%] lg:px-10 lg:gap-y-[60px]">
